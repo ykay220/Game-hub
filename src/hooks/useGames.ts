@@ -4,6 +4,7 @@ import { Genre } from "./useGeneres";
 
 export interface Platform {
   name: string;
+  id: string;
   slug: string;
 }
 
