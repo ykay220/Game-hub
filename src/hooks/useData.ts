@@ -31,6 +31,8 @@ const useData = <T>(
         })
         .catch((err) => {
           if (err instanceof CanceledError) return;
+          err.message =
+            "I'm sorry, but it seems that the monthly API limit for fetching games from RAWG API has been reached. Don't worry, this functionality will work again once it gets renewed on 6/25/2023!";
           setError(err.message);
           setLoading(false);
         });
